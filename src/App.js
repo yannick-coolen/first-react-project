@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import './Input/Input.css'
+import Input from './Input/Input'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    labels: [
+      { label: 'Firstname: '},
+      { label: 'Lastname: '}
+    ]
+  }
+
+  render() {
+    return (
+      
+      <div className="App">
+        <h1>Form</h1>
+        <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
+          <Input label={this.state.labels[0].label}/>
+          <Input label={this.state.labels[1].label}/>
+          <button>Send</button>
+        </form>
+        
+      </div>
+    );
+  }
 }
 
 export default App;
