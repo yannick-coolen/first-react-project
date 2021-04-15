@@ -2,17 +2,17 @@
 
 .Input {
     text-align: center;
-}
+    
+    label {
+        margin-right: 50%;  
+    }
 
-.Input label {
-    margin-right: 50%;
-}
+    input {
+        width: 95%;
+        @include input-box;
+    }
 
-.Input input {
-    width: 95%;
-    @include input-box
-}
-
-.Input input[type=submit] {
-    width: 96%;
+    input[type=submit] {
+        width: 96%;
+    }
 }
