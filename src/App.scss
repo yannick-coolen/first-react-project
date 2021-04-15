@@ -1,0 +1,27 @@
+@import './config/var';
+
+.App {
+  text-align: center;
+  width: 40%;
+  margin: 0 auto;
+  font-size: 2vw;  
+}
+
+button {
+  width: 95%;
+  margin: 1rem auto;
+  height: 2vw;
+  background: $btn-background;
+  text-align: center;
+  color: $button-color;
+
+  &:hover {
+    background: $btn-background-hover;
+  }
+}
+
+h1 {
+  font-size: 1.5m;
+  font-family: $header-text;
+  text-shadow: $header-box-shadow;
+}

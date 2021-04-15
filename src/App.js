@@ -1,14 +1,19 @@
 import React, { Component } from 'react';
-import './App.css';
-import './Input/Input.css'
+import './App.scss';
+import './Input/Input.scss'
 import Input from './Input/Input'
+import Output from './Output/Output';
+import Validation from './Valdiation/Validation'
 
 class App extends Component {
   state = {
-    labels: [
-      { label: 'Firstname: '},
-      { label: 'Lastname: '}
-    ]
+    userInput: '' 
+  }
+
+  handleChange = (event) => {
+    this.setState( {
+      userInput: event.target.value   
+    });
   }
 
   render() {
@@ -16,13 +21,17 @@ class App extends Component {
       
       <div className="App">
         <h1>Form</h1>
-        <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="POST">
-          <Input label={this.state.labels[0].label}/>
-          <Input label={this.state.labels[1].label}/>
-          <button>Send</button>
-        </form>
-        
+        <form>
+          <Input
+          changed={this.handleChange}/>
+          <Output 
+          userInput={this.state.userInput}
+          />  
+        </form> 
+        <br />
+        <Validation inputLength={this.state.userInput.length}/> 
       </div>
+      
     );
   }
 }

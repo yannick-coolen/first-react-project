@@ -1,15 +1,17 @@
 import React from 'react';
-import './Input.css';
-
+import './Input.scss';
 
 const input = (props) => {
     return (
         <div className="Input">
-            <label>{props.label}</label>
+            <label>Write down your text</label>
             <br />
-            <input type="text" name={props.label}/>        
+            <input 
+            type="text" 
+            onChange={props.changed} 
+            />
         </div>
-    )  
+    );  
 };
 
 export default input;

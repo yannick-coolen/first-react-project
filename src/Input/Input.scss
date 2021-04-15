@@ -1,16 +1,20 @@
+@import '../config/var';
+
 .Input {
     text-align: center;
-    margin: 1rem auto;
-    font-size: 1rem;
 }
 
 .Input label {
-    font-size: 2vw;
-    margin-right: 73%;
+    margin-right: 50%;
 }
 
 .Input input {
     width: 95%;
+    font-size: 1.5vw;
     height: 2vw;
     border-radius: .5rem;
+}
+
+.Input input[type=submit] {
+    width: 96%;
 }
