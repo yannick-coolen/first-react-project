@@ -10,9 +10,7 @@
 
 .Input input {
     width: 95%;
-    font-size: 1.5vw;
-    height: 2vw;
-    border-radius: .5rem;
+    @include input-box
 }
 
 .Input input[type=submit] {

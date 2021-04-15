@@ -1,0 +1,14 @@
+@mixin primary-box {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+@mixin input-box {
+    font-size: 1.5vw;
+    height: 2vw;
+    border-radius: .5rem;
+}
+
+@mixin button-color {
+    background: rgb(236, 233, 233);
+    color: rgb(59, 59, 59);
+}
